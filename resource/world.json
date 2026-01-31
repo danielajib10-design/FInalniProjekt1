@@ -1,0 +1,27 @@
+{
+  "start": "VstupniHala",
+  "rooms": [
+    {
+      "name": "VstupniHala",
+      "description": "Velká vstupní hala s recepcí.",
+      "exits": {
+        "sever": "Satna"
+      }
+    },
+    {
+      "name": "Satna",
+      "description": "Místnost plná kovových skříněk.",
+      "exits": {
+        "jih": "VstupniHala",
+        "vychod": "HlavniSal"
+      }
+    },
+    {
+      "name": "HlavniSal",
+      "description": "Hlavní sál s rozbitou vitrínou.",
+      "exits": {
+        "zapad": "Satna"
+      }
+    }
+  ]
+}
