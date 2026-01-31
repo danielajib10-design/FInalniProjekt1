@@ -3,14 +3,14 @@
   "rooms": [
     {
       "name": "VstupniHala",
-      "description": "Velká vstupní hala s recepcí.",
+      "description": "Vstupní hala s recepcí.",
       "exits": {
         "sever": "Satna"
       }
     },
     {
       "name": "Satna",
-      "description": "Místnost plná kovových skříněk.",
+      "description": "Místnost plná skříněk.",
       "exits": {
         "jih": "VstupniHala",
         "vychod": "HlavniSal"
