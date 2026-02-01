@@ -5,22 +5,61 @@
       "name": "VstupniHala",
       "description": "Vstupní hala s recepcí.",
       "exits": {
-        "sever": "Satna"
+        "vychod": "Satna"
       }
     },
     {
       "name": "Satna",
-      "description": "Místnost plná skříněk.",
+      "description": "Šatna plná skříněk.",
       "exits": {
-        "jih": "VstupniHala",
-        "vychod": "HlavniSal"
+        "zapad": "VstupniHala",
+        "sever": "HlavniSal"
       }
     },
     {
       "name": "HlavniSal",
       "description": "Hlavní sál s rozbitou vitrínou.",
       "exits": {
-        "zapad": "Satna"
+        "jih": "Satna",
+        "vychod": "Chodba"
+      }
+    },
+    {
+      "name": "Chodba",
+      "description": "Dlouhá chodba spojující veřejné a nepřístupné části muzea.",
+      "exits": {
+        "zapad": "HlavniSal",
+        "sever": "Bufet",
+        "vychod": "Archiv"
+      }
+    },
+    {
+      "name": "Bufet",
+      "description": "Malý bufet s kávovarem.",
+      "exits": {
+        "jih": "Chodba"
+      }
+    },
+    {
+      "name": "Archiv",
+      "description": "Archiv plný listin a regálů.",
+      "exits": {
+        "zapad": "Chodba",
+        "sever": "Dilna"
+      }
+    },
+    {
+      "name": "Dilna",
+      "description": "Dílna údržbáře.",
+      "exits": {
+        "jih": "Archiv"
+      }
+    },
+    {
+      "name": "Depozitar",
+      "description": "Skrytý depozitář plný starých cetek.",
+      "exits": {
+        "jih": "Chodba"
       }
     }
   ]
