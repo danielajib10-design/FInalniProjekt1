@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,15 +11,47 @@ public class Room {
     private List<Item> items;
     private List<Character> characters;
 
-    public String getName();
-    public String getDescription();
+    public Room(String name, String description) {
+        this.name = name;
+        this.description = description;
+        this.exits = new HashMap<>();
+        this.items = new ArrayList<>();
+        this.characters = new ArrayList<>();
+    }
 
-    public void addExit(String direction, Room room);
-    public Room getExit(String direction);
+    public String getName() {
+        return name;
+    }
 
-    public void addItem(Item item);
-    public void removeItem(Item item);
+    public String getDescription() {
+        return description;
+    }
 
-    public List<Item> getItems();
-    public List<Character> getCharacters();
+    public void addExit(String direction, Room room) {
+        exits.put(direction, room);
+    }
+
+    public Room getExit(String direction) {
+        return exits.get(direction);
+    }
+
+    public Map<String, Room> getExits() {
+        return exits;
+    }
+
+    public void addItem(Item item) {
+        items.add(item);
+    }
+
+    public void removeItem(Item item) {
+        items.remove(item);
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public List<Character> getCharacters() {
+        return characters;
+    }
 }
