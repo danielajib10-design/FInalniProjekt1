@@ -1,3 +1,5 @@
+package Core;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,8 +10,8 @@ public class Room {
     private String name;
     private String description;
     private Map<String, Room> exits;
-    private List<Item> items;
-    private List<Character> characters;
+    private List<Item> items = new ArrayList<>();
+    private List<Core.Character> characters;
 
     public Room(String name, String description) {
         this.name = name;
@@ -49,6 +51,10 @@ public class Room {
 
     public List<Item> getItems() {
         return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
     public List<Character> getCharacters() {

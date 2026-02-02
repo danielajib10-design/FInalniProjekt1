@@ -1,3 +1,5 @@
+package Core;
+
 public class World {
 
     private Room startingRoom;
@@ -28,6 +30,4 @@ public class World {
         }
         return false;
     }
-
-
 }

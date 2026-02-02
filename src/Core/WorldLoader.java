@@ -1,3 +1,5 @@
+package Core;
+
 import com.google.gson.*;
 import java.io.FileReader;
 import java.util.HashMap;
@@ -5,9 +7,8 @@ import java.util.Map;
 
 public class WorldLoader {
 
-    public World load(String path) {
+    public static World loadWorld(String path) {
         try {
-
             JsonObject root = JsonParser.parseReader(new FileReader(path)).getAsJsonObject();
             JsonArray roomsArray = root.getAsJsonArray("rooms");
 
@@ -22,24 +23,24 @@ public class WorldLoader {
                 rooms.put(name, new Room(name, description));
             }
 
-
             for (JsonElement e : roomsArray) {
                 JsonObject object = e.getAsJsonObject();
                 Room room = rooms.get(object.get("name").getAsString());
 
-                JsonObject exits = object.getAsJsonObject("exits");
-                for (String direction : exits.keySet()) {
-                    String targetName = exits.get(direction).getAsString();
-                    room.addExit(direction, rooms.get(targetName));
+                if (object.has("exits")) {
+                    JsonObject exits = object.getAsJsonObject("exits");
+                    for (String direction : exits.keySet()) {
+                        String targetName = exits.get(direction).getAsString();
+                        room.addExit(direction, rooms.get(targetName));
+                    }
                 }
             }
-
 
             String startRoomName = root.get("start").getAsString();
             return new World(rooms.get(startRoomName));
 
         } catch (Exception e) {
-            System.out.println("Nepodařilo se načíst soubor!");
+            System.out.println("Nepodařilo se načíst soubor: " + path);
             e.printStackTrace();
             return null;
         }

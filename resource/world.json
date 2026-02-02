@@ -8,14 +8,26 @@
         "vychod": "Satna"
       }
     },
+
     {
       "name": "Satna",
       "description": "Šatna plná skříněk.",
       "exits": {
         "zapad": "VstupniHala",
         "sever": "HlavniSal"
-      }
+      },
+      "items": [
+        {
+          "name": "Mince",
+          "description": "Drobný, ale klíčový předmět nalezený v Šatně. Slouží výhradně k nákupu v automatu a po použití zmizí."
+        },
+        {
+          "name": "Baterka",
+          "description": "Sběratelský předmět nutný pro splnění úkolu v Archivu. Po jejím sebrání je přidána do inventáře a umožňuje interakci v tmavých místnostech."
+        }
+      ]
     },
+
     {
       "name": "HlavniSal",
       "description": "Hlavní sál s rozbitou vitrínou.",
@@ -24,6 +36,7 @@
         "vychod": "Chodba"
       }
     },
+
     {
       "name": "Chodba",
       "description": "Dlouhá chodba spojující veřejné a nepřístupné části muzea.",
@@ -33,13 +46,21 @@
         "vychod": "Archiv"
       }
     },
+
     {
       "name": "Bufet",
       "description": "Malý bufet s kávovarem.",
       "exits": {
         "jih": "Chodba"
-      }
+      },
+      "items": [
+        {
+          "name": "Horká káva",
+          "description": " Předmět, který slouží jako prostředek k získání důvěry pana Nováka. Její doručení posouvá hlavní dějovou linii."
+        }
+        ]
     },
+
     {
       "name": "Archiv",
       "description": "Archiv plný listin a regálů.",
@@ -48,19 +69,33 @@
         "sever": "Dilna"
       }
     },
+
     {
       "name": "Dilna",
       "description": "Dílna údržbáře.",
       "exits": {
         "jih": "Archiv"
-      }
+      },
+      "items": [
+        {
+          "name": "Univerzální klíč",
+          "description": "Předmět, který Adam získá od pana Nováka jako odměnu za doručení horké kávy. Tento klíč je nezbytný pro odemknutí přístupu do dalších částí muzea. "
+        }
+      ]
     },
+
     {
       "name": "Depozitar",
       "description": "Skrytý depozitář plný starých cetek.",
       "exits": {
         "jih": "Chodba"
-      }
+      },
+      "items": [
+        {
+          "name": "Svatováclavská koruna",
+          "description": "Klíčový příběhový předmět, který hráč získá od Huberta. Stává se prostředkem k odhalení pravdy a vítězství."
+        }
+      ]
     }
   ]
 }
