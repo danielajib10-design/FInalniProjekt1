@@ -6,8 +6,6 @@ import Core.Item;
 
 public class UseCommand implements Command {
 
-
-
     private Game game;
 
     public UseCommand(Game game) {
@@ -29,7 +27,7 @@ public class UseCommand implements Command {
         }
 
         item.use(game.getPlayer());
-        if (item.isOneUse()) {
+        if (item.isConsumable()) {
             inventory.removeItem(item);
             System.out.println(item.getName() + " byl spotřebován.");
         }
