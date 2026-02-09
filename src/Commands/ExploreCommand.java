@@ -13,14 +13,7 @@ public class ExploreCommand implements Command {
     }
 
 
-
-    @Override
-    public void execute(String[] parameters, Game game) {
-        return;
-    }
-
-    @Override
-    public boolean exit() {
-        return false;
+    public void execute(String[] parameters) {
+        game.describeCurrentRoom();
     }
 }

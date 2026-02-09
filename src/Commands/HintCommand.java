@@ -6,6 +6,7 @@ public class HintCommand implements Command {
 
 
 
+
     private Game game;
 
     public HintCommand(Game game) {
@@ -13,14 +14,11 @@ public class HintCommand implements Command {
     }
 
 
-
-    @Override
-    public void execute(String[] parameters, Game game) {
-        return;
-    }
-
-    @Override
-    public boolean exit() {
-        return false;
+    public void execute(String[] parameters) {
+        if (!game.getPlayer().getCurrentRoom().getItems().isEmpty()) {
+            System.out.println("Pokud vidíš nějaké předměty v místnosti tak je seber.");
+        } else {
+            System.out.println("Zkus prozkoumat okolí nebo jít do jiné místnosti.");
+        }
     }
 }

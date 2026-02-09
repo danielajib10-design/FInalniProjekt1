@@ -5,7 +5,6 @@ import Core.Game;
 public class GoCommand implements Command {
 
 
-
     private Game game;
 
     public GoCommand(Game game) {
@@ -13,14 +12,17 @@ public class GoCommand implements Command {
     }
 
 
+    public void execute(String[] parameters) {
+        if (parameters.length == 0) {
+            System.out.println("Musíš zadat směr (např. go sever).");
+            return;
+        }
 
-    @Override
-    public void execute(String[] parameters, Game game) {
-        return;
-    }
-
-    @Override
-    public boolean exit() {
-        return false;
+        String direction = parameters[0].toLowerCase();
+        if (game.movePlayer(direction)) {
+            game.describeCurrentRoom();
+        } else {
+            System.out.println("Tímto směrem se nedá jít.");
+        }
     }
 }
