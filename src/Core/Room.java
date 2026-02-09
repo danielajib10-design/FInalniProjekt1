@@ -60,4 +60,27 @@ public class Room {
     public List<Character> getCharacters() {
         return characters;
     }
+
+    public void addCharacter(Character character) {
+        characters.add(character);
+    }
+
+    public Item findItemByName(String name) {
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(name)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
+    public Character findCharacterByName(String name) {
+        for (Character character : characters) {
+            if (character.getName().equalsIgnoreCase(name)) {
+                return character;
+            }
+        }
+        return null;
+    }
+
 }

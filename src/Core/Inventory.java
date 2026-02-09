@@ -13,9 +13,13 @@ public class Inventory {
         this.items = new ArrayList<>();
     }
 
-    public void addItem(Item item){
-        this.items.add(item);
-    }
+        public boolean addItem(Item item) {
+            if (items.size() >= capacity) {
+                return false;
+            }
+            this.items.add(item);
+            return true;
+        }
 
     public void removeItem(Item item){
         this.items.remove(item);
@@ -24,6 +28,7 @@ public class Inventory {
     public void showItems(){
         if(items.isEmpty()){
             System.out.println("V inventári nemáš žádný předmět");
+            return;
         }else {
             System.out.println("V inventáři máš ");
         }
@@ -40,6 +45,13 @@ public class Inventory {
         return items;
     }
 
-
+    public Item findItemByName(String name) {
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(name)) {
+                return item;
+            }
+        }
+        return null;
+    }
 
 }

@@ -11,6 +11,8 @@ public class Player {
 
     public Player(Room currentRoom) {
         this.currentRoom = currentRoom;
+        this.inventory = new Inventory();
+        this.name = "Hráč";
     }
 
     public Room getCurrentRoom(){
@@ -23,5 +25,8 @@ public class Player {
         return inventory;
     }
 
+    public String getName() {
+        return name;
+    }
 
 }
