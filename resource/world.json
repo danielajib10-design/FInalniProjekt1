@@ -6,8 +6,16 @@
       "description": "Vstupní hala s recepcí.",
       "exits": {
         "vychod": "Satna"
-      }
+      },
+      "characters": [
+        {
+          "name": "Paní Černá",
+          "role": "Recepční",
+          "description": "Laskavá a pečující postava, která hráče ochotně nasměruje a vysvětlí mu první kroky."
+        }
+      ]
     },
+
 
     {
       "name": "Satna",
@@ -16,6 +24,13 @@
         "zapad": "VstupniHala",
         "sever": "HlavniSal"
       },
+      "characters": [
+        {
+          "name": "Sběratel Veteše",
+          "role": "Sběratel",
+          "description": "Podivín, který se věnuje prohledávání skříněk. Své objevy si pečlivě zapisuje do deníku a jeho důvěru musí hráč nejprve získat."
+        }
+      ],
       "items": [
         {
           "name": "Mince",
@@ -28,14 +43,23 @@
       ]
     },
 
+
     {
       "name": "HlavniSal",
       "description": "Hlavní sál s rozbitou vitrínou.",
       "exits": {
         "jih": "Satna",
         "vychod": "Chodba"
+      },
+      "characters": [
+      {
+        "name": "Duch architekta",
+        "role": "",
+        "description": " Tragický společník, který se objevuje nečekaně a pronáší záhadné poznámky k lokacím. Komunikuje pouze tehdy, když sám uzná za vhodné."
       }
+    ]
     },
+
 
     {
       "name": "Chodba",
@@ -44,8 +68,16 @@
         "zapad": "HlavniSal",
         "sever": "Bufet",
         "vychod": "Archiv"
-      }
+      },
+      "characters": [
+        {
+          "name": "Veterán",
+          "role": "Hlídač",
+          "description": "Působí jako stálý společník v chodbách, který postrkuje hráče\nsprávným směrem."
+        }
+      ]
     },
+
 
     {
       "name": "Bufet",
@@ -53,6 +85,14 @@
       "exits": {
         "jih": "Chodba"
       },
+      "characters": [
+        {
+          "name": "Barista Marek",
+          "role": "Ajťák",
+          "description": "Typický unavený odborník-ajťák, který tráví většinu dne řešením bugů u kávovaru a nemá na nic čas."
+
+        }
+      ],
       "items": [
         {
           "name": "Horká káva",
@@ -61,14 +101,23 @@
         ]
     },
 
+
     {
       "name": "Archiv",
       "description": "Archiv plný listin a regálů.",
       "exits": {
         "zapad": "Chodba",
         "sever": "Dilna"
-      }
+      },
+      "characters": [
+        {
+          "name": "Gerald",
+          "role": "Archivář",
+          "description": "Starší postava, která i přes svůj věk zachovala energii a chuť zkoumat zapomenuté listiny. Zakládá si na poctivých informacích."
+        }
+      ]
     },
+
 
     {
       "name": "Dilna",
@@ -76,6 +125,13 @@
       "exits": {
         "jih": "Archiv"
       },
+      "characters": [
+        {
+          "name": "Pan Novák",
+          "role": "Údržbář",
+          "description": " Na první pohled drsňák, ale ve skutečnosti má zlaté srdce\na rád pomůže"
+        }
+      ],
       "items": [
         {
           "name": "Univerzální klíč",
@@ -84,12 +140,20 @@
       ]
     },
 
+
     {
       "name": "Depozitar",
       "description": "Skrytý depozitář plný starých cetek.",
       "exits": {
         "jih": "Chodba"
       },
+      "characters": [
+        {
+          "name": "Hubert",
+          "role": "Zloděj",
+          "description": "Starý a známý podvodník, který vydává cetky za vzácné artefakty a snaží se každého oklamat."
+        }
+      ],
       "items": [
         {
           "name": "Svatováclavská koruna",
