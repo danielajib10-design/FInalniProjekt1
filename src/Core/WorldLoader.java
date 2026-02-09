@@ -34,6 +34,27 @@ public class WorldLoader {
                         room.addExit(direction, rooms.get(targetName));
                     }
                 }
+
+                if (object.has("items")) {
+                    JsonArray items = object.getAsJsonArray("items");
+                    for (JsonElement itemElement : items) {
+                        JsonObject itemObj = itemElement.getAsJsonObject();
+                        String itemName = itemObj.get("name").getAsString();
+                        String itemDescription = itemObj.get("description").getAsString();
+                        room.addItem(new Item(itemName, itemDescription));
+                    }
+                }
+
+                if (object.has("characters")) {
+                    JsonArray characters = object.getAsJsonArray("characters");
+                    for (JsonElement charElement : characters) {
+                        JsonObject charObj = charElement.getAsJsonObject();
+                        String characterName = charObj.get("name").getAsString();
+                        String role = charObj.has("role") ? charObj.get("role").getAsString() : "";
+                        String description = charObj.has("description") ? charObj.get("description").getAsString() : "";
+                        room.addCharacter(new Character(characterName, role, description));
+                    }
+                }
             }
 
             String startRoomName = root.get("start").getAsString();
