@@ -26,34 +26,6 @@ public class CommandProcessor {
     }
 
 
-    public void processCommand(String input){
-        String[] commandInput = input.trim().split(" ");
-        if(commandInput.length == 0 || commandInput[0].isEmpty()){
-            return;
-        }
-        String commandName = commandInput[0].toLowerCase();
-
-        String[] param = new String[commandInput.length - 1];
-        for(int i = 1; i < commandInput.length; i++){
-            param[i - 1] = commandInput[i];
-        }
-
-        Command command = commands.get(commandName);
-        if(command != null){
-            command.execute(param);
-        } else {
-            System.out.println("Příkaz nebyl nalezen");
-        }
-    }
-
-    public void run(Game game){
-        while (game.isRunning()) {
-            System.out.print("> ");
-            if (!scr.hasNextLine()) {
-                break;
-            }
-            String input = scr.nextLine();
-            processCommand(input);
         }
     }
 
