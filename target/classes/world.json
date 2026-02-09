@@ -1,0 +1,165 @@
+{
+  "start": "VstupniHala",
+  "rooms": [
+    {
+      "name": "VstupniHala",
+      "description": "Vstupní hala s recepcí.",
+      "exits": {
+        "vychod": "Satna"
+      },
+      "characters": [
+        {
+          "name": "Paní Černá",
+          "role": "Recepční",
+          "description": "Laskavá a pečující postava, která hráče ochotně nasměruje a vysvětlí mu první kroky."
+        }
+      ]
+    },
+
+
+    {
+      "name": "Satna",
+      "description": "Šatna plná skříněk.",
+      "exits": {
+        "zapad": "VstupniHala",
+        "sever": "HlavniSal"
+      },
+      "characters": [
+        {
+          "name": "Sběratel veteše",
+          "role": "Sběratel",
+          "description": "Podivín, který se věnuje prohledávání skříněk. Své objevy si pečlivě zapisuje do deníku a jeho důvěru musí hráč nejprve získat."
+        }
+      ],
+      "items": [
+        {
+          "name": "Mince",
+          "description": "Drobný, ale klíčový předmět nalezený v Šatně. Slouží výhradně k nákupu v automatu a po použití zmizí."
+        },
+        {
+          "name": "Baterka",
+          "description": "Sběratelský předmět nutný pro splnění úkolu v Archivu. Po jejím sebrání je přidána do inventáře a umožňuje interakci v tmavých místnostech."
+        }
+      ]
+    },
+
+
+    {
+      "name": "HlavniSal",
+      "description": "Hlavní sál s rozbitou vitrínou.",
+      "exits": {
+        "jih": "Satna",
+        "vychod": "Chodba"
+      },
+      "characters": [
+      {
+        "name": "Duch architekta",
+        "role": "",
+        "description": " Tragický společník, který se objevuje nečekaně a pronáší záhadné poznámky k lokacím. Komunikuje pouze tehdy, když sám uzná za vhodné."
+      }
+    ]
+    },
+
+
+    {
+      "name": "Chodba",
+      "description": "Dlouhá chodba spojující veřejné a nepřístupné části muzea.",
+      "exits": {
+        "zapad": "HlavniSal",
+        "sever": "Bufet",
+        "vychod": "Archiv"
+      },
+      "characters": [
+        {
+          "name": "Veterán",
+          "role": "Hlídač",
+          "description": "Působí jako stálý společník v chodbách, který postrkuje hráče\nsprávným směrem."
+        }
+      ]
+    },
+
+
+    {
+      "name": "Bufet",
+      "description": "Malý bufet s kávovarem.",
+      "exits": {
+        "jih": "Chodba"
+      },
+      "characters": [
+        {
+          "name": "Barista Marek",
+          "role": "Ajťák",
+          "description": "Typický unavený odborník-ajťák, který tráví většinu dne řešením bugů u kávovaru a nemá na nic čas."
+
+        }
+      ],
+      "items": [
+        {
+          "name": "Horká káva",
+          "description": " Předmět, který slouží jako prostředek k získání důvěry pana Nováka. Její doručení posouvá hlavní dějovou linii."
+        }
+        ]
+    },
+
+
+    {
+      "name": "Archiv",
+      "description": "Archiv plný listin a regálů.",
+      "exits": {
+        "zapad": "Chodba",
+        "sever": "Dilna"
+      },
+      "characters": [
+        {
+          "name": "Gerald",
+          "role": "Archivář",
+          "description": "Starší postava, která i přes svůj věk zachovala energii a chuť zkoumat zapomenuté listiny. Zakládá si na poctivých informacích."
+        }
+      ]
+    },
+
+
+    {
+      "name": "Dilna",
+      "description": "Dílna údržbáře.",
+      "exits": {
+        "jih": "Archiv"
+      },
+      "characters": [
+        {
+          "name": "Pan Novák",
+          "role": "Údržbář",
+          "description": " Na první pohled drsňák, ale ve skutečnosti má zlaté srdce\na rád pomůže"
+        }
+      ],
+      "items": [
+        {
+          "name": "Univerzální klíč",
+          "description": "Předmět, který Adam získá od pana Nováka jako odměnu za doručení horké kávy. Tento klíč je nezbytný pro odemknutí přístupu do dalších částí muzea. "
+        }
+      ]
+    },
+
+
+    {
+      "name": "Depozitar",
+      "description": "Skrytý depozitář plný starých cetek.",
+      "exits": {
+        "jih": "Chodba"
+      },
+      "characters": [
+        {
+          "name": "Hubert",
+          "role": "Zloděj",
+          "description": "Starý a známý podvodník, který vydává cetky za vzácné artefakty a snaží se každého oklamat."
+        }
+      ],
+      "items": [
+        {
+          "name": "Svatováclavská koruna",
+          "description": "Klíčový příběhový předmět, který hráč získá od Huberta. Stává se prostředkem k odhalení pravdy a vítězství."
+        }
+      ]
+    }
+  ]
+}
