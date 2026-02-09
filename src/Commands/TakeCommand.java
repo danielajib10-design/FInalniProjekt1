@@ -21,6 +21,19 @@ public class TakeCommand implements Command {
             return;
         }
 
-        String itemName = String.join(
+        String itemName = String.join(" ", parameters);
+        Room room = game.getPlayer().getCurrentRoom();
+        Item item = room.findItemByName(itemName);
+        if (item == null) {
+            System.out.println("Takový předmět tu není.");
+            return;
+        }
+
+        if (game.getPlayer().getInventory().addItem(item)) {
+            room.removeItem(item);
+            System.out.println("Sebral jsi: " + item.getName());
+        } else {
+            System.out.println("Inventář je plný.");
+        }
     }
 }

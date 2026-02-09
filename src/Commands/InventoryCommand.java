@@ -10,5 +10,10 @@ public class InventoryCommand implements Command {
     public InventoryCommand(Game game) {
         this.game = game;
     }
+
+    @Override
+    public void execute(String[] parameters) {
+        Inventory inventory = game.getPlayer().getInventory();
+        inventory.showItems();
     }
 }
