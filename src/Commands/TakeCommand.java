@@ -28,6 +28,10 @@ public class TakeCommand implements Command {
             System.out.println("Takový předmět tu není.");
             return;
         }
+        if (item.getName().equalsIgnoreCase("Kavovar")){
+            System.out.println("Kávovar nemůžeš vzít.");
+            return;
+        }
 
         if (game.getPlayer().getInventory().addItem(item)) {
             room.removeItem(item);

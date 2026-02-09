@@ -8,11 +8,13 @@ public class Player {
     private String description;
     private Room currentRoom;
     private Inventory inventory;
+    private boolean coffeeMachineRepaired;
 
     public Player(Room currentRoom) {
         this.currentRoom = currentRoom;
         this.inventory = new Inventory();
         this.name = "Adam";
+        this.coffeeMachineRepaired = false;
     }
 
     public Room getCurrentRoom(){
@@ -28,5 +30,14 @@ public class Player {
     public String getName() {
         return name;
     }
+
+    public boolean isCoffeeMachineRepaired() {
+        return coffeeMachineRepaired;
+    }
+
+    public void setCoffeeMachineRepaired(boolean coffeeMachineRepaired) {
+        this.coffeeMachineRepaired = coffeeMachineRepaired;
+    }
+
 
 }
