@@ -27,6 +27,7 @@ public class Game {
         this.running = true;
 
         System.out.println("Data byla úspěšně načtena. Hra začíná!");
+        getMap();
         describeCurrentRoom();
         this.commandProcessor.run(this);
     }
@@ -40,6 +41,17 @@ public class Game {
 
     public boolean isRunning(){
         return running;
+    }
+
+    public void getMap(){
+        System.out.println("Mapa: ");
+        System.out.println("        [ Dílna ] -------- [ Archiv ] -------- [ Depozitář ]\n" +
+                "            |                   |                   |\n" +
+                "            |                   |                   |\n" +
+                "        [ Bufet ] -------- [ Chodba ] -------- [ Hlavní sál ]\n" +
+                "                                |                   |\n" +
+                "                                |                   |\n" +
+                "                          [ Vstupní hala ] ---- [ Šatna ]");
     }
 
     public World getWorld() {
@@ -76,5 +88,6 @@ public class Game {
                 System.out.println("- " + character.getName() + " (" + character.getRole() + ")");
             }
         }
+
     }
 }

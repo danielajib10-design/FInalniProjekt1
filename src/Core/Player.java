@@ -12,7 +12,7 @@ public class Player {
     public Player(Room currentRoom) {
         this.currentRoom = currentRoom;
         this.inventory = new Inventory();
-        this.name = "Hráč";
+        this.name = "Adam";
     }
 
     public Room getCurrentRoom(){
