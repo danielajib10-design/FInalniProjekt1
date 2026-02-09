@@ -3,6 +3,8 @@ package Commands;
 import Core.*;
 import Core.Character;
 
+import java.util.Scanner;
+
 public class TalkCommand implements Command {
 
 
@@ -54,5 +56,39 @@ public class TalkCommand implements Command {
             return;
         }
         character.talk(game.getPlayer());
+    }
+    private void handleHubertEncounter(Character character, Room room, Player player) {
+        if (!room.getName().equalsIgnoreCase("Depozitar")) {
+            character.talk(player);
+            return;
+        }
+        if (player.isHubertDefeated()) {
+            System.out.println("Hubert: Už jsi mě porazil. Koruna je tvá.");
+            return;
+        }
+        System.out.println("Hubert: Jelikož jsem si vědom tvé síly tak ti dám hádanku a kdzy ji zodpovíš správně");
+        System.out.println("Hádanka: Jmenuji se Ptáček, ale nejsem zvíře jaké je mé jméno");
+        System.out.print("Odpověď: ");
+        Scanner scr = new Scanner(System.in);
+        String answer = scr.nextLine().trim().toLowerCase();
+        if (!answer.equalsIgnoreCase("Ondra") && !answer.equalsIgnoreCase("Ondřej")) {
+            System.out.println("Hubert: Špatně!");
+            System.out.println("Protože jsi odpověděl špatně tak Hubert vzal korunu a utekl.");
+            System.out.println("!!!!!!!!!Konec Hry zkus to znova!!!!!!!!!");
+            game.end();
+            return;
+        }
+        player.setHubertDefeated(true);
+        Item crown = room.findItemByName("Svatovaclavska koruna");
+        if (crown != null) {
+            if (player.getInventory().addItem(crown)) {
+                room.removeItem(crown);
+                System.out.println("Hubert: Dobře, vyhrál jsi. Tady máš svatováclavskou korunu.");
+            } else {
+                System.out.println("Hubert: Vyhrál jsi, ale máš plný inventář. Udělej si místo a korunu si vezmi.");
+            }
+        } else {
+            System.out.println("Hubert: Vyhrál jsi, ale korunu už nemam.");
+        }
     }
 }

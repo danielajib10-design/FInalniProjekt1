@@ -9,12 +9,14 @@ public class Player {
     private Room currentRoom;
     private Inventory inventory;
     private boolean coffeeMachineRepaired;
+    private boolean hubertDefeated;
 
     public Player(Room currentRoom) {
         this.currentRoom = currentRoom;
         this.inventory = new Inventory();
         this.name = "Adam";
         this.coffeeMachineRepaired = false;
+        this.hubertDefeated = false;
     }
 
     public Room getCurrentRoom(){
@@ -39,5 +41,11 @@ public class Player {
         this.coffeeMachineRepaired = coffeeMachineRepaired;
     }
 
+    public boolean isHubertDefeated() {
+        return hubertDefeated;
+    }
 
+    public void setHubertDefeated(boolean hubertDefeated) {
+        this.hubertDefeated = hubertDefeated;
+    }
 }
