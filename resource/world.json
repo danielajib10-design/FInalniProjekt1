@@ -5,7 +5,8 @@
       "name": "VstupniHala",
       "description": "Vstupní hala s recepcí.",
       "exits": {
-        "vychod": "Satna"
+        "vychod": "Satna",
+        "sever": "Chodba"
       },
       "characters": [
         {
@@ -49,7 +50,8 @@
       "description": "Hlavní sál s rozbitou vitrínou.",
       "exits": {
         "jih": "Satna",
-        "vychod": "Chodba"
+        "zapad": "Chodba",
+        "sever": "Depozitar"
       },
       "characters": [
       {
@@ -65,9 +67,10 @@
       "name": "Chodba",
       "description": "Dlouhá chodba spojující veřejné a nepřístupné části muzea.",
       "exits": {
-        "zapad": "HlavniSal",
-        "sever": "Bufet",
-        "vychod": "Archiv"
+        "zapad": "Bufet",
+        "sever": "Archiv",
+        "vychod": "HlavniSal",
+        "jih": "VstupniHala"
       },
       "characters": [
         {
@@ -83,7 +86,8 @@
       "name": "Bufet",
       "description": "Malý bufet s kávovarem.",
       "exits": {
-        "jih": "Chodba"
+        "vychod": "Chodba",
+        "sever": "Dilna"
       },
       "characters": [
         {
@@ -106,8 +110,9 @@
       "name": "Archiv",
       "description": "Archiv plný listin a regálů.",
       "exits": {
-        "zapad": "Chodba",
-        "sever": "Dilna"
+        "zapad": "Dilna",
+        "vychod": "Depozitar",
+        "jih": "Chodba"
       },
       "characters": [
         {
@@ -123,7 +128,8 @@
       "name": "Dilna",
       "description": "Dílna údržbáře.",
       "exits": {
-        "jih": "Archiv"
+        "jih": "Bufet",
+        "vychod": "Archiv"
       },
       "characters": [
         {
@@ -145,7 +151,8 @@
       "name": "Depozitar",
       "description": "Skrytý depozitář plný starých cetek.",
       "exits": {
-        "jih": "Chodba"
+        "jih": "HlavniSal",
+        "zapad": "Archiv"
       },
       "characters": [
         {
