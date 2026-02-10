@@ -33,7 +33,7 @@ public class TalkCommand implements Command {
             handleHubertEncounter(character, room, game.getPlayer());
             return;
         }
-        if (character.getName().equalsIgnoreCase("Pan Novak")) {
+        if (character.getName().equalsIgnoreCase("Pan Novak")||character.getName().equalsIgnoreCase("Pan Novák")) {
             Inventory inventory = game.getPlayer().getInventory();
             Item coffee = inventory.findItemByName("Horka kava");
             Item key = inventory.findItemByName("Univerzalni klic");
