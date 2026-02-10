@@ -133,9 +133,9 @@
       },
       "characters": [
         {
-          "name": "Pan Novák",
+          "name": "Pan Novak",
           "role": "Údržbář",
-          "description": " Na první pohled drsňák, ale ve skutečnosti má zlaté srdce\na rád pomůže"
+          "description": " Na první pohled drsňák, ale ve skutečnosti má zlaté srdce a rád pomůže"
         }
       ]
     },
@@ -153,6 +153,12 @@
           "name": "Hubert",
           "role": "Zloděj",
           "description": "Starý a známý podvodník, který vydává cetky za vzácné artefakty a snaží se každého oklamat."
+        }
+      ],
+      "items": [
+        {
+          "name": "Svatovaclavska koruna",
+          "description": "Rozbitý automat na kávu, který je potřeba opravit před použitím mince."
         }
       ]
     }

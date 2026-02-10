@@ -29,7 +29,11 @@ public class TalkCommand implements Command {
             System.out.println("Taková postava tu není.");
             return;
         }
-        if (character.getName().equalsIgnoreCase("Pan Novák")) {
+        if (character.getName().equalsIgnoreCase("Hubert")) {
+            handleHubertEncounter(character, room, game.getPlayer());
+            return;
+        }
+        if (character.getName().equalsIgnoreCase("Pan Novak")) {
             Inventory inventory = game.getPlayer().getInventory();
             Item coffee = inventory.findItemByName("Horka kava");
             Item key = inventory.findItemByName("Univerzalni klic");
@@ -66,7 +70,7 @@ public class TalkCommand implements Command {
             System.out.println("Hubert: Už jsi mě porazil. Koruna je tvá.");
             return;
         }
-        System.out.println("Hubert: Jelikož jsem si vědom tvé síly tak ti dám hádanku a kdzy ji zodpovíš správně");
+        System.out.println("Hubert: Jelikož jsem si vědom tvé síly tak ti dám hádanku a kdzy ji zodpovíš správně, tak se vzdám a dám ti tu korunu.");
         System.out.println("Hádanka: Jmenuji se Ptáček, ale nejsem zvíře jaké je mé jméno");
         System.out.print("Odpověď: ");
         Scanner scr = new Scanner(System.in);

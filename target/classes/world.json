@@ -133,9 +133,9 @@
       },
       "characters": [
         {
-          "name": "Pan Novák",
+          "name": "Pan Novak",
           "role": "Údržbář",
-          "description": " Na první pohled drsňák, ale ve skutečnosti má zlaté srdce\na rád pomůže"
+          "description": " Na první pohled drsňák, ale ve skutečnosti má zlaté srdce a rád pomůže"
         }
       ]
     },
@@ -158,7 +158,7 @@
       "items": [
         {
           "name": "Svatovaclavska koruna",
-          "description": "Klíčový příběhový předmět, který hráč získá od Huberta. Stává se prostředkem k odhalení pravdy a vítězství."
+          "description": "Rozbitý automat na kávu, který je potřeba opravit před použitím mince."
         }
       ]
     }
