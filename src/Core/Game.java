@@ -27,6 +27,15 @@ public class Game {
         this.running = true;
 
         System.out.println("Data byla úspěšně načtena. Hra začíná!");
+        System.out.println();
+        System.out.println("Adam nastupuje na svou první samostatnou směnu jako bezpečnostní pracovník v Muzeu Starých časů.");
+        System.out.println("Během půlnoční obchůzky ale zjistí, že nejcennější exponát, Svatováclavská koruna, zmizel a vitrína je rozbitá.");
+        System.out.println("Okamžitě se spustí nouzový protokol a všechny východy se uzavřou. Adam ví, že pokud korunu nenajde, stane se hlavním podezřelým.");
+        System.out.println("Brzy navíc zjišťuje, že v budově není sám. Další lidé, kteří tu zůstali uvěznění, mohou mít informace, které mu pomohou odhalit zloděje.");
+        System.out.println();
+        System.out.println("Bež za Paní Černou ta ti poradí co dělat");
+        System.out.println();
+
         getMap();
         describeCurrentRoom();
         this.commandProcessor.run(this);

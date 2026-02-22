@@ -12,7 +12,7 @@
         {
           "name": "Paní Černá",
           "role": "Recepční",
-          "description": "Laskavá a pečující postava, která hráče ochotně nasměruje a vysvětlí mu první kroky."
+          "description": "Adame, spustil se nouzový protokol. Muzeum je teď uzavřené a nikdo nemůže ven.\n Zkus si promluvit s ostatními lidmi v budově. Možná něco viděli. Běž do šatnz a zjisti, co se stalo.“"
         }
       ]
     },
@@ -29,7 +29,7 @@
         {
           "name": "Sběratel Veteše",
           "role": "Sběratel",
-          "description": "Podivín, který se věnuje prohledávání skříněk. Své objevy si pečlivě zapisuje do deníku a jeho důvěru musí hráč nejprve získat."
+          "description": "Ahoj Adame, někde mi tady vypadla mince a baterka když je najdeš tak si je můžeš nechat.\n Taky by ses mohl jit podívat do Hlavního sálu slyšel jsem tam jako by se rozbilo nějaké sklo "
         }
       ],
       "items": [
@@ -57,7 +57,7 @@
       {
         "name": "Duch architekta",
         "role": "",
-        "description": " Tragický společník, který se objevuje nečekaně a pronáší záhadné poznámky k lokacím. Komunikuje pouze tehdy, když sám uzná za vhodné."
+        "description": "„Cítím narušení rovnováhy někdo odnesl to, co sem patří. Viděl jsem ho utíkat.\n Nešel hlavní cestou zamířil do chodby vedoucí pryč z tohoto sálu. Použil staré průchody, které většina lidí nezná. Pokud chceš najít pravdu, pokračuj do chodby. Tam najdeš jeho stopu.“"
       }
     ]
     },
@@ -76,7 +76,7 @@
         {
           "name": "Veterán",
           "role": "Hlídač",
-          "description": "Působí jako stálý společník v chodbách, který postrkuje hráče\nsprávným směrem."
+          "description": "Adame, teď tady někdo proběhl a šel směrem do bufetu a v ruce držel nějaký pytel ve kterém něco cinkalo"
         }
       ]
     },
