@@ -39,10 +39,12 @@ public class CommandProcessor {
      * @param input vstup od uživatele
      */
     public void processCommand(String input){
-        String[] commandInput = input.trim().split(" ");
-        if(commandInput.length == 0 || commandInput[0].isEmpty()){
+        if (input == null || input.isBlank()) {
+            System.out.println("Zadej příkaz.");
             return;
+
         }
+        String[] commandInput = input.trim().split(" ");
         String commandName = commandInput[0].toLowerCase();
 
         String[] param = new String[commandInput.length - 1];

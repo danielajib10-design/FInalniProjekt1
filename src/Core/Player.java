@@ -29,9 +29,10 @@ public class Player {
     public Room getCurrentRoom(){
         return currentRoom;
     }
-    public void setCurrentRoom(Room room){
-        this.currentRoom = room;
-    }
+    public void setCurrentRoom(Room room) {
+        if (room != null) {
+            this.currentRoom = room;
+        }}
     public Inventory getInventory(){
         return inventory;
     }
