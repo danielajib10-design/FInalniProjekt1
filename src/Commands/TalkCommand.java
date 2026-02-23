@@ -93,11 +93,11 @@ public class TalkCommand implements Command {
             return;
         }
         System.out.println("Hubert: Jelikož jsem si vědom tvé síly tak ti dám hádanku a kdzy ji zodpovíš správně, tak se vzdám a dám ti tu korunu.");
-        System.out.println("Hádanka: Jmenuji se Ptáček, ale nejsem zvíře jaké je mé jméno");
+        System.out.println("Hádanka: Jsem Ptáček, ale nejsem zvíře jaké je mé jméno");
         System.out.print("Odpověď: ");
         Scanner scr = new Scanner(System.in);
         String answer = scr.nextLine().trim().toLowerCase();
-        if (!answer.equalsIgnoreCase("Ondra") && !answer.equalsIgnoreCase("Ondřej")) {
+        if (!answer.equalsIgnoreCase("Ondra") && !answer.equalsIgnoreCase("Ondřej") && !answer.equalsIgnoreCase("Ondrej")) {
             System.out.println("Hubert: Špatně!");
             System.out.println("Protože jsi odpověděl špatně tak Hubert vzal korunu a utekl.");
             System.out.println("!!!!!!!!!Konec Hry zkus to znova!!!!!!!!!");
