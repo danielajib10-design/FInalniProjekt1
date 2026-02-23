@@ -3,16 +3,27 @@ package Commands;
 import Core.Game;
 import Core.Room;
 
+/**
+ * Příkaz pro přesun hráče mezi místnostmi.
+ * @author Daniel AJib
+ */
 public class GoCommand implements Command {
 
 
     private Game game;
 
+    /**
+     * Vytvoří příkaz.
+     * @param game instance hry
+     */
     public GoCommand(Game game) {
         this.game = game;
     }
 
-
+    /**
+     * Provede přesun ve zvoleném směru.
+     * @param parameters směr pohybu
+     */
     public void execute(String[] parameters) {
         if (parameters.length == 0) {
             System.out.println("Musíš zadat směr (např. jdi sever).");

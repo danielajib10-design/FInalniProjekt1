@@ -1,15 +1,31 @@
 package Commands;
 
-import Core.*;
+import Core.Game;
+import Core.Inventory;
+import Core.Item;
+import Core.Player;
+import Core.Room;
 
+/**
+ * Příkaz pro použití předmětu.
+ * @author Daniel Ajib
+ */
 public class UseCommand implements Command {
 
     private Game game;
 
+    /**
+     * Vytvoří příkaz.
+     * @param game instance hry
+     */
     public UseCommand(Game game) {
         this.game = game;
     }
 
+    /**
+     * Provede použití předmětu z inventáře nebo interakci s předmětem v místnosti.
+     * @param parameters název předmětu
+     */
     public void execute(String[] parameters) {
         if (parameters.length == 0) {
             System.out.println("Musíš zadat název předmětu.");

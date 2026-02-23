@@ -1,7 +1,10 @@
 package Core;
 
+/**
+ * Třída pro hráče a jeho herní stav.
+ * @author Daniel Ajib
+ */
 public class Player {
-
 
 
     private String name;
@@ -11,6 +14,10 @@ public class Player {
     private boolean coffeeMachineRepaired;
     private boolean hubertDefeated;
 
+    /**
+     * Vytvoří hráče v první místnosti.
+     * @param currentRoom aktuální místnost hráče
+     */
     public Player(Room currentRoom) {
         this.currentRoom = currentRoom;
         this.inventory = new Inventory();

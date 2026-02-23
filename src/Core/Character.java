@@ -1,13 +1,22 @@
 package Core;
 
+/**
+ * Třída pro postavy ve hře.
+ * @author Daniel Ajib
+ */
 public class Character {
 
     private String name;
     private String role;
     private String description;
 
-    public Character() {}
 
+    /**
+     * Vytvoří postavu.
+     * @param name jméno
+     * @param role role postavy
+     * @param description text dialogu/popisu
+     */
     public Character(String name, String role, String description) {
         this.name = name;
         this.role = role;
@@ -19,9 +28,6 @@ public class Character {
     }
     public String getRole(){
         return role;
-    }
-    public String getDescription(){
-        return description;
     }
 
     public void talk(Player player){

@@ -1,21 +1,36 @@
 package Commands;
 
-import Core.*;
+
 import Core.Character;
+import Core.Game;
+import Core.Inventory;
+import Core.Item;
+import Core.Player;
+import Core.Room;
 
 import java.util.Scanner;
 
+/**
+ * Příkaz pro rozhovor s postavou.
+ * @author Daniel Ajib
+ */
 public class TalkCommand implements Command {
-
 
 
     private Game game;
 
-
+    /**
+     * Vytvoří příkaz.
+     * @param game instance hry
+     */
     public TalkCommand(Game game) {
         this.game = game;
     }
 
+    /**
+     * Provede rozhovor s postavou.
+     * @param parameters jméno postavy
+     */
     public void execute(String[] parameters) {
         if (parameters.length == 0) {
             System.out.println("Musíš zadat jméno postavy.");
@@ -61,6 +76,13 @@ public class TalkCommand implements Command {
         }
         character.talk(game.getPlayer());
     }
+
+    /**
+     * Zpracuje speciální událost při rozhovoru s Hubertem.
+     * @param character postava Hubert
+     * @param room aktuální místnost
+     * @param player hráč
+     */
     private void handleHubertEncounter(Character character, Room room, Player player) {
         if (!room.getName().equalsIgnoreCase("Depozitar")) {
             character.talk(player);

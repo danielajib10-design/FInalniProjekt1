@@ -7,12 +7,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Zpracovává vstup od uživatele a spouští příkazy.
+ * @author Daniel Ajib
+ */
 public class CommandProcessor {
 
 
     private final Map<String, Command> commands = new HashMap<>();
     private final Scanner scr = new Scanner(System.in);
 
+    /**
+     * Zaregistruje všechny dostupné herní příkazy.
+     * @param game instance hry
+     */
     public void registerCommand(Game game){
         commands.put("pomoc", new HelpCommand(game));
         commands.put("jdi", new GoCommand(game));
@@ -26,7 +34,10 @@ public class CommandProcessor {
         commands.put("odloz", new DropCommand(game));
     }
 
-
+    /**
+     * Zpracuje jeden textový příkaz.
+     * @param input vstup od uživatele
+     */
     public void processCommand(String input){
         String[] commandInput = input.trim().split(" ");
         if(commandInput.length == 0 || commandInput[0].isEmpty()){
@@ -47,6 +58,10 @@ public class CommandProcessor {
         }
     }
 
+    /**
+     * Spustí vstupní smyčku příkazů.
+     * @param game instance hry
+     */
     public void run(Game game){
         while (game.isRunning()) {
             System.out.print("> ");
@@ -57,5 +72,4 @@ public class CommandProcessor {
             processCommand(input);
         }
     }
-
 }

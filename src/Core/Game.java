@@ -2,6 +2,11 @@ package Core;
 
 import Commands.CommandProcessor;
 
+/**
+ * Třída řídicí celý průběh hry.
+ * Stará se o spuštění, stav hry, pohyb hráče a vykreslení informací o světě.
+ * @author Daniel Ajib
+ */
 public class Game {
 
 
@@ -10,6 +15,9 @@ public class Game {
     private CommandProcessor commandProcessor;
     private boolean running;
 
+    /**
+     * Spustí hru, načte svět, zaregistruje příkazy a začne herní smyčku.
+     */
     public void start() {
 
         WorldLoader worldLoader = new WorldLoader();
@@ -44,14 +52,14 @@ public class Game {
         this.running = false;
     }
 
-    public void processInput(String input){
-        this.commandProcessor.processCommand(input);
-    }
 
     public boolean isRunning(){
         return running;
     }
 
+     /**
+     * Vypíše mapu muzea.
+     */
     public void getMap(){
         System.out.println("Mapa: ");
         System.out.println("        [ Dílna ] -------- [ Archiv ] -------- [ Depozitář ]\n" +
@@ -63,14 +71,16 @@ public class Game {
                 "                          [ Vstupní hala ] ---- [ Šatna ]");
     }
 
-    public World getWorld() {
-        return world;
-    }
 
     public Player getPlayer() {
         return player;
     }
 
+    /**
+     * Pokusí se přesunout hráče do sousední místnosti.
+     * @param direction směr pohybu
+     * @return true pokud se přesun povedl
+     */
     public boolean movePlayer(String direction) {
         if (world.move(direction)) {
             player.setCurrentRoom(world.getCurrentRoom());
@@ -79,6 +89,9 @@ public class Game {
         return false;
     }
 
+    /**
+     * Vypíše detail aktuální místnosti včetně východů, předmětů a postav.
+     */
     public void describeCurrentRoom() {
         Room room = player.getCurrentRoom();
         System.out.println(room.getName() + ": " + room.getDescription());

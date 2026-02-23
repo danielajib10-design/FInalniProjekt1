@@ -3,16 +3,27 @@ package Core;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Třída pro inventáře hráče.
+ * @author Daniel Ajib
+ */
 public class Inventory {
 
     private int capacity;
     private List<Item> items;
-
+    /**
+     * Vytvoří inventář s kapacitou dva.
+     */
     public Inventory() {
         this.capacity = 2;
         this.items = new ArrayList<>();
     }
 
+    /**
+     * Přidá předmět do inventáře pokud tam je místo.
+     * @param item předmět
+     * @return true pokud byl přidán
+     */
         public boolean addItem(Item item) {
             if (items.size() >= capacity) {
                 return false;
@@ -25,6 +36,9 @@ public class Inventory {
         this.items.remove(item);
     }
 
+    /**
+     * Vypíše předměty v inventáři.
+     */
     public void showItems(){
         if(items.isEmpty()){
             System.out.println("V inventári nemáš žádný předmět");
@@ -37,14 +51,11 @@ public class Inventory {
         }
     }
 
-    public boolean containsItem(Item item){
-        return items.contains(item);
-    }
-
-    public List<Item> getItems(){
-        return items;
-    }
-
+    /**
+     * Najde předmět podle názvu.
+     * @param name název předmětu
+     * @return nalezený předmět nebo null
+     */
     public Item findItemByName(String name) {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(name)) {

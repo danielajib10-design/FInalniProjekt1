@@ -1,12 +1,22 @@
 package Core;
 
-import com.google.gson.*;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * Načítá herní svět z JSON souboru.
+ * @author Daniel Ajib
+ */
 public class WorldLoader {
-
+    /**
+     * Načte svět ze zadaného souboru.
+     * @param path cesta k JSON souboru
+     * @return načtený svět nebo null při chybě
+     */
     public static World loadWorld(String path) {
         try {
             JsonObject root = JsonParser.parseReader(new FileReader(path)).getAsJsonObject();

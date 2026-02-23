@@ -4,17 +4,27 @@ import Core.Game;
 import Core.Item;
 import Core.Room;
 
+/**
+ * Příkaz pro sebrání předmětu z místnosti.
+ * @author Daniel Ajib
+ */
 public class TakeCommand implements Command {
 
 
     private Game game;
 
-
+    /**
+     * Vytvoří příkaz.
+     * @param game instance hry
+     */
     public TakeCommand(Game game) {
         this.game = game;
     }
 
-
+    /**
+     * Provede sebrání předmětu.
+     * @param parameters název předmětu
+     */
     public void execute(String[] parameters) {
         if (parameters.length == 0) {
             System.out.println("Musíš zadat název předmětu.");

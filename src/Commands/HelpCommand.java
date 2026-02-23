@@ -2,16 +2,26 @@ package Commands;
 
 import Core.Game;
 
+/**
+ * Příkaz pro výpis nápovědy.
+ * @author Daniel Ajib
+ */
 public class HelpCommand implements Command {
-
 
     private Game game;
 
+    /**
+     * Vytvoří příkaz.
+     * @param game instance hry
+     */
     public HelpCommand(Game game) {
         this.game = game;
     }
 
-
+    /**
+     * Vypíše dostupné příkazy.
+     * @param parameters nepoužito
+     */
     public void execute(String[] parameters) {
         System.out.println("Dostupné příkazy:");
         System.out.println("pomoc: zobrazí nápovědu");

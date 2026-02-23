@@ -12,7 +12,7 @@
         {
           "name": "Paní Černá",
           "role": "Recepční",
-          "description": "„Adame, spustil se nouzový protokol. Muzeum je teď uzavřené a nikdo nemůže ven, dokud se nenajde.\n Zkus si promluvit s ostatními lidmi v budově. Možná něco viděli. Najdi korunu a zjisti, co se stalo.“"
+          "description": "Adame, spustil se nouzový protokol. Muzeum je teď uzavřené a nikdo nemůže ven.\n Zkus si promluvit s ostatními lidmi v budově. Možná něco viděli. Běž do šatnz a zjisti, co se stalo.“"
         }
       ]
     },
@@ -76,7 +76,7 @@
         {
           "name": "Veterán",
           "role": "Hlídač",
-          "description": "Působí jako stálý společník v chodbách, který postrkuje hráče\nsprávným směrem."
+          "description": "Adame, teď tady někdo proběhl a šel směrem do bufetu a v ruce držel nějaký pytel ve kterém něco cinkalo"
         }
       ]
     },
@@ -93,7 +93,7 @@
         {
           "name": "Barista Marek",
           "role": "Ajťák",
-          "description": "Typický unavený odborník-ajťák, který tráví většinu dne řešením bugů u kávovaru a nemá na nic čas."
+          "description": "Adame, tenhle kávovar je zase rozbitý.\n Když ho opravíš, budeš si moct udělat horkou kávu. Myslím, že pan Novák by ji fakt ocenil. Bez ní s tebou mluvit nebude."
 
         }
       ],
@@ -118,7 +118,7 @@
         {
           "name": "Gerald",
           "role": "Archivář",
-          "description": "Starší postava, která i přes svůj věk zachovala energii a chuť zkoumat zapomenuté listiny. Zakládá si na poctivých informacích."
+          "description": "Vítej, Adame. Archiv skrývá mnoho tajemství, ale bez světla nic neuvidíš.\n Pokud máš baterku, můžeš tudy projít."
         }
       ]
     },
@@ -135,7 +135,7 @@
         {
           "name": "Pan Novak",
           "role": "Údržbář",
-          "description": " Na první pohled drsňák, ale ve skutečnosti má zlaté srdce a rád pomůže"
+          "description": "Co chceš, Adame? Jestli mi neseš horkou kávu, možná ti pomůžu.\n Ty dveře a staré zámky znám líp než kdokoliv jiný. Když mi pomůžeš, dám ti univerzální klíč. Ten ti otevře dveře od depozitáře."
         }
       ]
     },
@@ -152,13 +152,13 @@
         {
           "name": "Hubert",
           "role": "Zloděj",
-          "description": "Starý a známý podvodník, který vydává cetky za vzácné artefakty a snaží se každého oklamat."
+          "description": "Tak jsi mě našel, Adame. Myslel sis, že to bude tak jednoduché?\n Tahle koruna má větší cenu, než si dokážeš představit. Jestli ji chceš zpátky, budeš si ji muset vzít silou"
         }
       ],
       "items": [
         {
           "name": "Svatovaclavska koruna",
-          "description": "Rozbitý automat na kávu, který je potřeba opravit před použitím mince."
+          "description": "Svatováclavská Koruna je velmi cenný předmět tohoto muzea, musí být uložen zpátky do své vitríny"
         }
       ]
     }

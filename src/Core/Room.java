@@ -5,14 +5,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Třída pro každou místnost ve hře.
+ * @author Daniel AJib
+ */
 public class Room {
 
     private String name;
     private String description;
     private Map<String, Room> exits;
-    private List<Item> items = new ArrayList<>();
+    private List<Item> items;
     private List<Core.Character> characters;
 
+    /**
+     * Vytvoří místnost.
+     * @param name název místnosti
+     * @param description popis místnosti
+     */
     public Room(String name, String description) {
         this.name = name;
         this.description = description;
@@ -53,9 +62,6 @@ public class Room {
         return items;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
-    }
 
     public List<Character> getCharacters() {
         return characters;
@@ -65,6 +71,11 @@ public class Room {
         characters.add(character);
     }
 
+    /**
+     * Najde předmět podle názvu
+     * @param name název
+     * @return nalezený předmět nebo null
+     */
     public Item findItemByName(String name) {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(name)) {
@@ -74,6 +85,11 @@ public class Room {
         return null;
     }
 
+    /**
+     * Najde postavu podle jména.
+     * @param name jméno
+     * @return nalezená postava nebo null
+     */
     public Character findCharacterByName(String name) {
         for (Character character : characters) {
             if (character.getName().equalsIgnoreCase(name)) {
