@@ -42,6 +42,10 @@ public class GoCommand implements Command {
             System.out.println("Depozitář je zamčený. Potřebuješ univerzální klíč.");
             return;
         }
+        if (nextRoom.getName().equalsIgnoreCase("Depozitar") && !game.getPlayer().isPlansOpened()) {
+            System.out.println("Než půjdeš do depozitáře, musíš nejdřív v archivu vyřešit hádanku a otevřít plány.");
+            return;
+        }
         if (nextRoom.getName().equalsIgnoreCase("Archiv")
                 && game.getPlayer().getInventory().findItemByName("Baterka") == null) {
             System.out.println("V Archivu je černo černá tma bez baterky tam jít nemůžeš.");

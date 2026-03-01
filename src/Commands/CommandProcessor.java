@@ -30,6 +30,7 @@ public class CommandProcessor {
         commands.put("vem", new TakeCommand(game));
         commands.put("mluv", new TalkCommand(game));
         commands.put("pouzij", new UseCommand(game));
+        commands.put("oprav", new UseCommand(game));
         commands.put("inventar", new InventoryCommand(game));
         commands.put("odloz", new DropCommand(game));
     }

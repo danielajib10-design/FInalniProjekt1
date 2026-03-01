@@ -14,6 +14,7 @@ public class Player {
     private boolean coffeeMachineRepaired;
     private boolean hubertDefeated;
     private boolean riddleAnswered;
+    private boolean plansOpened;
 
     /**
      * Vytvoří hráče v první místnosti.
@@ -25,6 +26,8 @@ public class Player {
         this.name = "Adam";
         this.coffeeMachineRepaired = false;
         this.hubertDefeated = false;
+        this.riddleAnswered = false;
+        this.plansOpened = false;
     }
 
     public Room getCurrentRoom(){
@@ -64,5 +67,13 @@ public class Player {
 
     public void setRiddleAnswered(boolean riddleAnswered) {
         this.riddleAnswered = riddleAnswered;
+    }
+
+    public boolean isPlansOpened() {
+        return plansOpened;
+    }
+
+    public void setPlansOpened(boolean plansOpened) {
+        this.plansOpened = plansOpened;
     }
 }

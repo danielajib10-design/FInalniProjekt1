@@ -118,7 +118,7 @@
         {
           "name": "Gerald",
           "role": "Archivář",
-          "description": "Vítej, Adame. Archiv skrývá mnoho tajemství, ale bez světla nic neuvidíš.\n Pokud máš baterku, můžeš tudy projít."
+          "description": "Vítej, Adame. Archiv skrývá mnoho tajemství, ale bez světla nic neuvidíš.\n Pokud máš baterku, tak vyres hadnku at otevres plany."
         }
       ]
     },
@@ -157,7 +157,7 @@
       ],
       "items": [
         {
-          "name": ": Svatovaclavska koruna",
+          "name": "Svatovaclavska koruna",
           "description": "Svatováclavská Koruna je velmi cenný předmět tohoto muzea, musí být uložen zpátky do své vitríny"
         }
       ]

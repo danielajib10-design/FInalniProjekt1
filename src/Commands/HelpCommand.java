@@ -32,6 +32,7 @@ public class HelpCommand implements Command {
         System.out.println("odloz <předmět>: odloží předmět do místnosti a odebere ho z inventáře");
         System.out.println("mluv <postava>: promluví s postavou");
         System.out.println("inventar: zobrazí inventář");
+        System.out.println("oprav <předmět>: opraví kávovar");
         System.out.println("napoveda: vypíše nápovědu");
         System.out.println("konec: ukončí hru");
 
