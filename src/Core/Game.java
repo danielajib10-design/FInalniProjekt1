@@ -22,7 +22,7 @@ public class Game {
 
         WorldLoader worldLoader = new WorldLoader();
 
-        this.world = worldLoader.loadWorld("world.json");
+        this.world = worldLoader.loadWorld("resource/world.json");
 
         if (this.world != null) {
             this.player = new Player(world.getStartingRoom());
@@ -57,7 +57,7 @@ public class Game {
         return running;
     }
 
-     /**
+    /**
      * Vypíše mapu muzea.
      */
     public void getMap(){
