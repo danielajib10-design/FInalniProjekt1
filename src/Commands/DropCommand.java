@@ -47,8 +47,10 @@ public class DropCommand implements Command{
             System.out.println("Korunu jsi uložil zpět na originální místo a tím jsi zachránil svoji pozici.");
             System.out.println("!!!!!!!VYHRÁL JSI!!!!!!!");
             game.end();
-        }else {
-            System.out.println("Svatováclavskou korunu musíš odložit zpátky do Hlavního Sálu.");
+        }else  {
+           if (item.getName().equalsIgnoreCase("Svatovaclavska koruna")) {
+               System.out.println("Svatováclavskou korunu musíš odložit zpátky do Hlavního Sálu.");
+           }
+           }
         }
-    }
     }

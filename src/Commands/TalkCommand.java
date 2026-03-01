@@ -40,16 +40,23 @@ public class TalkCommand implements Command {
         String characterName = String.join(" ", parameters);
         Room room = game.getPlayer().getCurrentRoom();
         Character character = room.findCharacterByName(characterName);
+        Inventory inventory = game.getPlayer().getInventory();
         if (character == null) {
             System.out.println("Taková postava tu není.");
             return;
         }
         if (character.getName().equalsIgnoreCase("Hubert")) {
-            handleHubertEncounter(character, room, game.getPlayer());
+            handleHubertEncounter(character, room, game.getPlayer(), inventory);
             return;
         }
+
+        if (character.getName().equalsIgnoreCase("Gerald")) {
+            geraldsRiddle(character, room, game.getPlayer(), inventory);
+            return;
+        }
+
         if (character.getName().equalsIgnoreCase("Pan Novak")||character.getName().equalsIgnoreCase("Pan Novák")) {
-            Inventory inventory = game.getPlayer().getInventory();
+            inventory = game.getPlayer().getInventory();
             Item coffee = inventory.findItemByName("Horka kava");
             Item key = inventory.findItemByName("Univerzalni klic");
             if (key != null) {
@@ -57,7 +64,7 @@ public class TalkCommand implements Command {
                 return;
             }
             if (coffee == null) {
-                System.out.println("Pan Novák: Kdzž mi přineseš horkou kávu dám ti za to klíč.");
+                System.out.println("Pan Novák: Když mi přineseš horkou kávu dám ti za to klíč.");
                 return;
             }
             inventory.removeItem(coffee);
@@ -78,12 +85,13 @@ public class TalkCommand implements Command {
     }
 
     /**
-     * Zpracuje speciální událost při rozhovoru s Hubertem.
+     * Tvoří otázku od Huberta a odměnu za to.
      * @param character postava Hubert
      * @param room aktuální místnost
      * @param player hráč
+     * @param inventory inventář
      */
-    private void handleHubertEncounter(Character character, Room room, Player player) {
+    private void handleHubertEncounter(Character character, Room room, Player player,Inventory  inventory) {
         if (!room.getName().equalsIgnoreCase("Depozitar")) {
             character.talk(player);
             return;
@@ -117,4 +125,52 @@ public class TalkCommand implements Command {
             System.out.println("Hubert: Vyhrál jsi, ale korunu už nemam.");
         }
     }
+
+    /**
+     * Tvoří otázku od Geralda a odměnu za to.
+     * @param character postava Gerald
+     * @param room aktuální místnost
+     * @param player hráč
+     * @param inventory inventář
+     */
+    private void geraldsRiddle(Character character, Room room, Player player, Inventory inventory) {
+        if (!room.getName().equalsIgnoreCase("Depozitar")) {
+            character.talk(player);
+            return;
+        }
+        if (player.isRiddleAnswered()) {
+            System.out.println("Gerald: Hádanku jsi už zodpověděl.");
+            return;
+        }
+        while (player.isRiddleAnswered()==false) {
+        System.out.println("Hubert: Jelikož jsem si vědom tvé síly tak ti dám hádanku a kdzy ji zodpovíš správně, tak se vzdám a dám ti tu korunu.");
+        System.out.println("Hádanka: Jsem Ptáček, ale nejsem zvíře jaké je mé jméno");
+        System.out.print("Odpověď: ");
+        Scanner scr = new Scanner(System.in);
+        String answer = scr.nextLine().trim().toLowerCase();
+        if (!answer.equalsIgnoreCase("Ondra") && !answer.equalsIgnoreCase("Ondřej") && !answer.equalsIgnoreCase("Ondrej")) {
+            System.out.println("Hubert: Špatně!");
+            System.out.println("Protože jsi odpověděl špatně tak Hubert vzal korunu a utekl.");
+            System.out.println("!!!!!!!!!Konec Hry zkus to znova!!!!!!!!!");
+            return;
+
+        }
+            if (answer.equalsIgnoreCase("Ondra")) {
+                player.setRiddleAnswered(true);
+            }
+
+        }
+        player.setRiddleAnswered(true);
+        Item baterka = inventory.findItemByName("Baterka");
+        if (baterka!= null) {
+            if (player.getInventory().findItemByName("baterka") != null) {
+                System.out.println("Tady se koukni na plány a potom se mužeš přesunout dál.");
+                game.getMap();
+            }
+        }else {
+            System.out.println("Jak ses sem vůbec dostal bez baterky.");
+
+        }
+
+}
 }

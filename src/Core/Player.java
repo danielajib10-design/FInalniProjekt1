@@ -13,6 +13,7 @@ public class Player {
     private Inventory inventory;
     private boolean coffeeMachineRepaired;
     private boolean hubertDefeated;
+    private boolean riddleAnswered;
 
     /**
      * Vytvoří hráče v první místnosti.
@@ -55,5 +56,13 @@ public class Player {
 
     public void setHubertDefeated(boolean hubertDefeated) {
         this.hubertDefeated = hubertDefeated;
+    }
+
+    public boolean isRiddleAnswered() {
+        return riddleAnswered;
+    }
+
+    public void setRiddleAnswered(boolean riddleAnswered) {
+        this.riddleAnswered = riddleAnswered;
     }
 }

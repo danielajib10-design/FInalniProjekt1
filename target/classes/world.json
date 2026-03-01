@@ -35,11 +35,11 @@
       "items": [
         {
           "name": "Mince",
-          "description": "Drobný, ale klíčový předmět nalezený v Šatně. Slouží výhradně k nákupu v automatu a po použití zmizí."
+          "description": ": Drobný, ale klíčový předmět nalezený v Šatně. Slouží výhradně k nákupu v automatu a po použití zmizí."
         },
         {
           "name": "Baterka",
-          "description": "Sběratelský předmět nutný pro splnění úkolu v Archivu. Po jejím sebrání je přidána do inventáře a umožňuje interakci v tmavých místnostech."
+          "description": ": Sběratelský předmět nutný pro splnění úkolu v Archivu. Po jejím sebrání je přidána do inventáře a umožňuje interakci v tmavých místnostech."
         }
       ]
     },
@@ -100,7 +100,7 @@
       "items": [
         {
           "name": "Kavovar",
-          "description": "Rozbitý automat na kávu, který je potřeba opravit před použitím mince."
+          "description": ": Rozbitý automat na kávu, který je potřeba opravit před použitím mince."
         }
         ]
     },
@@ -157,7 +157,7 @@
       ],
       "items": [
         {
-          "name": "Svatovaclavska koruna",
+          "name": ": Svatovaclavska koruna",
           "description": "Svatováclavská Koruna je velmi cenný předmět tohoto muzea, musí být uložen zpátky do své vitríny"
         }
       ]

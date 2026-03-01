@@ -21,7 +21,7 @@ public class GoCommand implements Command {
     }
 
     /**
-     * Provede přesun ve zvoleném směru.
+     * Provede přesun ve zvoleném směru pokud to jde.
      * @param parameters směr pohybu
      */
     public void execute(String[] parameters) {
@@ -40,6 +40,11 @@ public class GoCommand implements Command {
         if (nextRoom.getName().equalsIgnoreCase("Depozitar")
                 && game.getPlayer().getInventory().findItemByName("Univerzalni klic") == null) {
             System.out.println("Depozitář je zamčený. Potřebuješ univerzální klíč.");
+            return;
+        }
+        if (nextRoom.getName().equalsIgnoreCase("Archiv")
+                && game.getPlayer().getInventory().findItemByName("Baterka") == null) {
+            System.out.println("V Archivu je černo černá tma bez baterky tam jít nemůžeš.");
             return;
         }
         if (game.movePlayer(direction)) {

@@ -77,7 +77,7 @@ public class Game {
     }
 
     /**
-     * Pokusí se přesunout hráče do sousední místnosti.
+     * Pokusí se přesunout hráče do sousední místnosti podle směru.
      * @param direction směr pohybu
      * @return true pokud se přesun povedl
      */

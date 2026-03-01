@@ -1,7 +1,7 @@
 import Core.Game;
 
 /**
- * Vstupní bod aplikace.
+ * Hlavní třída programu.
  * @author Daniel Ajib
  */
 public class Main {
