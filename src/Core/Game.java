@@ -15,14 +15,25 @@ public class Game {
     private CommandProcessor commandProcessor;
     private boolean running;
 
+
+
+
     /**
      * Spustí hru, načte svět, zaregistruje příkazy a začne herní smyčku.
      */
     public void start() {
 
+
+        if (this.world == null) {
+            throw new IllegalStateException("Svět se nepodařilo načíst!");
+        }
+
+        this.player = new Player(this.world.getStartingRoom());
+
         WorldLoader worldLoader = new WorldLoader();
 
         this.world = worldLoader.loadWorld("resource/world.json");
+
 
         if (this.world != null) {
             this.player = new Player(world.getStartingRoom());
