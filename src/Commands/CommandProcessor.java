@@ -14,8 +14,8 @@ import java.util.Scanner;
 public class CommandProcessor {
 
 
-    private final Map<String, Command> commands = new HashMap<>();
-    private final Scanner scr = new Scanner(System.in);
+    private Map<String, Command> commands = new HashMap<>();
+    private Scanner scr = new Scanner(System.in);
 
     /**
      * Zaregistruje všechny dostupné herní příkazy.
